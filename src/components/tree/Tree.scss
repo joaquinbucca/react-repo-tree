@@ -1,0 +1,77 @@
+.sidebar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  background-color: #f9fafb;
+  overflow: auto;
+}
+
+.Tree-loading {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.Tree {
+
+  label:not(:empty) {
+    flex: 1 1 auto !important;
+  }
+
+  .node-options {
+    display: inline-flex;
+    padding-right: 10px;
+
+    > * {
+      padding-right: 5px;
+    }
+
+    > :last-child {
+      padding-right: 0;
+    }
+
+    > :first-child {
+      padding-left: 5px;
+    }
+    > svg {
+      width: 50px !important;
+    }
+  }
+
+  label {
+    width: 100%;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .tree-node {
+    width: 100%;
+    padding-top: 7px;
+    padding-bottom: 9px;
+    display: inline-flex;
+    justify-content: space-between;
+    max-height: 100%;
+  }
+
+  .dropping, .dropping label {
+    font-weight: bold;
+  }
+
+  .file-menu, .Tree .folder-menu, .new-menu {
+    cursor: pointer;
+  }
+
+  .tree-menu svg {
+    display: block;
+    height: 14px !important;
+    width: 144px !important;
+    fill: #a0a0a0;
+  }
+
+  .read-only {
+    color: #a0a0a0 !important;
+    -webkit-font-smoothing: auto;
+  }
+}
